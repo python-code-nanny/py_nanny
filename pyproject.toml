@@ -1,0 +1,24 @@
+[project]
+name = "py-nanny"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.128.0",
+    "neo4j>=6.1.0",
+    "pandas>=2.3.3",
+    "pydantic>=2.12.5",
+    "pydantic-ai>=1.41.0",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "ruff>=0.14.11",
+    "tasks>=2.8.0",
+    "watchfiles>=1.1.1",
+]
+
