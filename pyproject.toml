@@ -20,5 +20,21 @@ dev = [
     "ruff>=0.14.11",
     "tasks>=2.8.0",
     "watchfiles>=1.1.1",
+    "black>=24.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.9.0",
 ]
 
+[tool.taskipy.tasks]
+# Run test suite
+test = "pytest -q"
+# Static analysis/linting
+lint = "ruff check ."
+# Code formatting
+format = "black . && isort . && ruff format ."
+# Type checking
+type-check = "mypy src --strict"
+# Run all checks (tests, lint, type-check)
+check = "task test && task lint && task type-check"
+# Run pre-commit hooks across all files
+precommit = "pre-commit run --all-files"
