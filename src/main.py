@@ -1,8 +1,7 @@
-
 def main():
-    return "Hello from py-nanny!" 
+    return "Hello from py-nanny!"
 
 
 if __name__ == "__main__":
-   resp = main()
-   print(resp)
+    resp = main()
+    print(resp)
